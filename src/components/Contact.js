@@ -26,10 +26,11 @@ export default function Contact() {
             {/* Left Side - Image (Stacks on top in mobile) */}
             <div className="col-lg-6 col-12 text-center">
               <img
-                src={`${basePath}/assets/img/6737248.png`}
+                src={`${basePath}/assets/img/4653bdfefd695c7.png`}
                 alt="Digitechvault AI Innovation"
                 className="aboutImg img-fluid"
-                data-aos="fade-right"
+                data-aos="fade-up"
+                style={{ width:"470px",maxWidth: "100%", height: "auto", borderRadius:"30px"  }}
                 data-aos-duration="1000"
                 data-aos-delay="500"
               />

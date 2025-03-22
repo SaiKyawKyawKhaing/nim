@@ -21,18 +21,18 @@ export default function Choose() {
             >
 
                 <div className="container">
-                    <div className="row gy-4 align-items-center py-5">
+                    <div className="row gy-4 align-items-center">
 
                         {/* Right Side - Image */}
                         <div className="col-lg-6 text-center">
                             <img
-                                src={`${basePath}/assets/img/vision2.png`}
+                                src={`${basePath}/assets/img/b2748dea12956.png`}
                                 alt="Digitechvault AI Innovation"
                                 className="img-fluid"
                                 data-aos="fade-left"
                                 data-aos-duration="1000"
                                 data-aos-delay="500"
-                                style={{ width:"600px",maxWidth: "100%", height: "auto", borderRadius:"30px" , padding:"20px" }}
+                                style={{ width:"470px",maxWidth: "100%", height: "auto", borderRadius:"30px"  }}
                             />
                         </div>
                         {/* Left Side - Text Content */}
