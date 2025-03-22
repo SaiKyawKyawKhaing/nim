@@ -1,0 +1,27 @@
+{
+  "heading": "Discover reliable solutions built for your needs.",
+  "subheading": "Explore our innovative solutions tailored to meet your needs. Quality and performance you can trust.",
+  "products": [
+    {
+      "id":1,
+      "categoryId":1,
+      "name": "RF Repeaters",
+      "description": "RF Repeaters Application Scenarios:Hotels, Shopping Malls, Offices, Parking Lots, etc.",
+      "image": "rfrepe.webp"
+    },
+    {
+      "id":2,
+      "categoryId":1,
+      "name": "DAS Antennas & RF Devices",
+      "description": "350-6000 MHz/600-6000 MHz Ceiling/ Panel/ Log-Period Antennas",
+      "image": "das.webp"
+    },
+    {
+      "id":3,
+      "categoryId":2,
+      "name": "Fiber Optics",
+      "description": "Fiber Optics",
+      "image": "fiber.webp"
+    }
+  ]
+}
