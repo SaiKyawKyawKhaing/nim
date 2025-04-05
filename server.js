@@ -7,8 +7,9 @@ const dev = process.env.NODE_ENV !== 'production'
 const hostname = process.env.HOSTNAME || 'localhost'
 const port = process.env.PORT || 3000
 
-// Use the current directory for both development and production
-const dir = '.'
+// Configure base path for production environment
+const basePath = process.env.NODE_ENV === 'production' ? process.env.BASE_PATH || '' : ''
+const dir = path.join(__dirname)
 
 const app = next({ dev, dir, hostname, port })
 const handle = app.getRequestHandler()
@@ -17,15 +18,14 @@ app.prepare().then(() => {
   createServer(async (req, res) => {
     try {
       const parsedUrl = parse(req.url, true)
-      const { pathname, query } = parsedUrl
+      let { pathname, query } = parsedUrl
 
-      if (pathname === '/a') {
-        await app.render(req, res, '/a', query)
-      } else if (pathname === '/b') {
-        await app.render(req, res, '/b', query)
-      } else {
-        await handle(req, res, parsedUrl)
+      // Handle base path in production
+      if (basePath && pathname.startsWith(basePath)) {
+        pathname = pathname.slice(basePath.length)
       }
+
+      await handle(req, res, parsedUrl)
     } catch (err) {
       console.error('Error occurred handling', req.url, err)
       res.statusCode = 500
