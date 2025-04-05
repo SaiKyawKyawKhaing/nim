@@ -1,8 +1,10 @@
 import React from "react";
 import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
 
 export default function MainBanner() {
     const { basePath } = useRouter();
+    const { t } = useTranslation('common');
     
     function scrollToSection(sectionId) {
         const section = document.getElementById(sectionId);
@@ -19,12 +21,12 @@ export default function MainBanner() {
             <section id="hero" className="hero section dark-background">
                 <img src={`${basePath}/assets/img/hero-bg.jpg`} alt="" className="" />   
                 <div className="container d-flex flex-row align-items-center text-center rm-mt-auto mt-auto">
-                    <h2 className="">Empowering<br /><span>Southeast Asia </span>with AI-Driven Solutions</h2>
+                    <h2 className="">{t('mainBanner.title')}</h2>
                     <div>
-                    <p className="d-sm-none d-md-block d-none">NIM က စီးပွါးရေးလုပ်ငန်းများအတွက် အိုင်တီဆန်းသစ်မှုတွေ ယူလာပေးဖို့ အသင့်ရှိနေပြီ။ ဘာတွေများ စောင့်နေသေးလဲ။ ကဲ၊အတူတူ အံ့ဖွယ်တစ်ခုကို တည်ဆောက်ကြရအောင်!</p>
+                    <p className="d-sm-none d-md-block d-none">{t('mainBanner.description')}</p>
                     <div className="d-flex justify-content-center align-items-center pt-5 pb-5">
                         <button className="button mr-3" onClick={() => scrollToSection('services')}>
-                            Explore Our Services
+                            {t('mainBanner.exploreServices')}
                             <svg fill="currentColor" viewBox="0 0 24 24" className="icon">
                                 <path
                                     clip-rule="evenodd"
@@ -34,7 +36,7 @@ export default function MainBanner() {
                             </svg>
                         </button>
                         <button className="button mr-3" onClick={() => scrollToSection('contact')}>
-                            Contact Us Today
+                            {t('mainBanner.contactUs')}
                             <svg fill="currentColor" viewBox="0 0 24 24" className="icon">
                                 <path
                                     clip-rule="evenodd"

@@ -1,6 +1,8 @@
 import Footer from '@/components/layouts/Footer.js';
 import Header from '@/components/layouts/Header.js';
 import Banner from '@/components/layouts/Banner.js';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 /**
  * Service page component
@@ -12,14 +14,23 @@ import Banner from '@/components/layouts/Banner.js';
  * @return {JSX.Element} The Service page component.
  */
 
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common']))
+    }
+  }
+}
+
 export default function Service() {
+  const { t } = useTranslation('common');
   return (
     <>
       <div className="index-page">
       <Header />
       <Banner
-        title="Service"
-        description="porro placeat quibusdam quia assumenda numquam molestias."
+        title={t('services.title')}
+        description={t('services.description')}
         breadcrumbs={[
           { href: '/', text: 'Home' },
           { href: '/service', text: 'Service', current: true },

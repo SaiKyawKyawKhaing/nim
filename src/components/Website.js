@@ -1,9 +1,11 @@
 import React from "react";
 import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
 
 
 export default function Website() {
-    const {basePath} = useRouter()
+    const {basePath} = useRouter();
+    const { t } = useTranslation('common');
   return (
 <section
   id="vision"
@@ -27,41 +29,41 @@ export default function Website() {
         {/* Left Side - Text Content */}
         <div className="col-lg-6">
           <h1 style={{ fontWeight: 800, color: "white", padding: "10px 0" }}>
-          Website တစ်ခုဖန်တီးခြင်း 
+            {t('website.title')}
           </h1>
-          <h6 style={{ fontWeight: 800, color: "white", padding: "25px 0" }}>Website တစ်ခုကို ဘယ်လိုတည်ဆောက်ကြသလဲဆိုတာ သိချင်ပါသလား?</h6>
+          <h6 style={{ fontWeight: 800, color: "white", padding: "25px 0" }}>{t('website.subtitle')}</h6>
           <ul className="p-box">
   <li>
-    <strong>1. Initial Consultation:</strong> 
-    <p>Understanding your idea and discussing the type of website you need.</p>
+    <strong>{t('website.steps.consultation.title')}</strong> 
+    <p>{t('website.steps.consultation.description')}</p>
   </li>
 </ul>
 
 <ul className="p-box">
   <li>
-    <strong>2. Content Gathering:</strong> 
-    <p>Collecting photos, text, and logos to ensure everything is in place.</p>
+    <strong>{t('website.steps.content.title')}</strong> 
+    <p>{t('website.steps.content.description')}</p>
   </li>
 </ul>
 
 <ul className="p-box">
   <li>
-    <strong>3. Design & Development:</strong> 
-    <p>Transforming your idea into a modern, functional website.</p>
+    <strong>{t('website.steps.design.title')}</strong> 
+    <p>{t('website.steps.design.description')}</p>
   </li>
 </ul>
 
 <ul className="p-box">
   <li>
-    <strong>4. Revisions & Feedback:</strong> 
-    <p>Refining the design based on your input and finalizing the details.</p>
+    <strong>{t('website.steps.revisions.title')}</strong> 
+    <p>{t('website.steps.revisions.description')}</p>
   </li>
 </ul>
 
 <ul className="p-box">
   <li>
-    <strong>5. Final Launch:</strong> 
-    <p>Deploying your website and celebrating its successful launch.</p>
+    <strong>{t('website.steps.launch.title')}</strong> 
+    <p>{t('website.steps.launch.description')}</p>
   </li>
 </ul>
 

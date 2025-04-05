@@ -1,7 +1,10 @@
 import menuData from '../../../public/DB/menu.json';
 import categories from '../../../public/DB/categories.json';
-import { useState,useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 
 /**
  * The navigation menu component.
@@ -29,6 +32,10 @@ import Link from 'next/link';
 const Menu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(true);
+  const router = useRouter();
+  const { t, i18n } = useTranslation('common');
+
+
 
   useEffect(() => {
     const handleResize = () => {
@@ -48,6 +55,7 @@ const Menu = () => {
   return (
     <nav id="navmenu" className="navmenu">
       <ul className={`mobile-ul ${menuOpen ? 'show-mobile' : 'hide-mobile'}`}>
+
         {menuData.map(({ name, href, children }, index) => (
           <li key={index}>
             {children ? (
@@ -71,6 +79,9 @@ const Menu = () => {
             )}
           </li>
         ))}
+        <li>
+          <LanguageSwitcher />
+        </li>
       </ul>
       <i id="main-toggle" className={`mobile-nav-toggle d-xl-none ${menuOpen ? 'bi bi-x' : 'bi bi-list'}`} onClick={toggleMenu} />
     </nav>

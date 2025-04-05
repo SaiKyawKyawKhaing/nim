@@ -12,13 +12,12 @@ export default function Contact() {
         backgroundImage: `url(${basePath}/assets/img/contact-bg.png)`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        minHeight: "100vh",
         width: "100vw",
       }}
     >
       <div
         className="overlay d-flex align-items-center"
-        style={{ backgroundColor: "#110123d1", minHeight: "100vh", width: "100vw" }}
+        style={{ backgroundColor: "#110123d1", width: "100vw" }}
       >
         <div className="container">
           <div className="row gy-4 align-items-center">

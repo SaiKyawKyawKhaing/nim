@@ -1,8 +1,10 @@
 import React from "react";
 import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
 
 export default function Choose() {
-    const { basePath } = useRouter()
+    const { basePath } = useRouter();
+    const { t } = useTranslation();
     return (
         <section
             id="why-choose-us"
@@ -38,41 +40,41 @@ export default function Choose() {
                         {/* Left Side - Text Content */}
                         <div className="col-lg-6">
                             <h1 style={{ fontWeight: 800, color: "white", padding: "10px 0", lineHeight:2 }}>
-                            NIM ကိုရွေးချယ်ရသည့် အကြောင်းရင်း
+                                {t('choose.title')}
                             </h1>
-                            <h6 style={{ fontWeight: 800, color: "white", padding: "25px 0",lineHeight:2 }}>NIM (Next IT Myanmar) တွင် မြန်မာနှင့် နိုင်ငံတကာရှိ လုပ်ငန်းများ၏ လိုအပ်ချက်များကို ဖြည့်ဆည်းပေးသည့် ဆန်းသစ်သော IT အရင်းအမြစ်များကို ပေးစွမ်းပါသည်။</h6>
+                            <h6 style={{ fontWeight: 800, color: "white", padding: "25px 0",lineHeight:2 }}>{t('choose.description')}</h6>
                             <ul className="p-box">
                                 <li>
-                                    <strong>Local Expertise</strong>
-                                    <p>We understand the unique challenges of the Myanmar market.</p>
+                                    <strong>{t('choose.localExpertise.title')}</strong>
+                                    <p>{t('choose.localExpertise.description')}</p>
                                 </li>
                             </ul>
 
                             <ul className="p-box">
                                 <li>
-                                    <strong>Comprehensive Services</strong>
-                                    <p>From website and app development to IT consultancy, we offer end-to-end solutions.</p>
+                                    <strong>{t('choose.comprehensiveServices.title')}</strong>
+                                    <p>{t('choose.comprehensiveServices.description')}</p>
                                 </li>
                             </ul>
 
                             <ul className="p-box">
                                 <li>
-                                    <strong>Cutting-Edge Technology</strong>
-                                    <p>We specialize in AI integration, custom software, and cloud-based platforms.</p>
+                                    <strong>{t('choose.cuttingEdge.title')}</strong>
+                                    <p>{t('choose.cuttingEdge.description')}</p>
                                 </li>
                             </ul>
 
                             <ul className="p-box">
                                 <li>
-                                    <strong>Tailored Solutions</strong>
-                                    <p>Our services are designed to meet your specific business needs.</p>
+                                    <strong>{t('choose.tailoredSolutions.title')}</strong>
+                                    <p>{t('choose.tailoredSolutions.description')}</p>
                                 </li>
                             </ul>
 
                             <ul className="p-box">
                                 <li>
-                                    <strong>Ongoing Support</strong>
-                                    <p>We provide continuous support to help your technology grow with your business.</p>
+                                    <strong>{t('choose.ongoingSupport.title')}</strong>
+                                    <p>{t('choose.ongoingSupport.description')}</p>
                                 </li>
                             </ul>
 

@@ -1,9 +1,11 @@
 import React from "react";
 import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
 
 
 export default function Vision() {
     const { basePath } = useRouter()
+    const { t } = useTranslation('common');
     return (
         <section
             id="vision"
@@ -27,20 +29,20 @@ export default function Vision() {
                         {/* Left Side - Text Content */}
                         <div className="col-lg-6">
                             <h1 style={{ fontWeight: 800, color: "white", padding: "10px 0" }}>
-                                Vision & Mission
+                            {t('vision.title')}
                             </h1>
-                            <h6 style={{ fontWeight: 800, color: "white", padding: "25px 0" }}>Website တစ်ခုကို ဘယ်လိုတည်ဆောက်ကြသလဲဆိုတာ သိချင်ပါသလား?</h6>
+                            <h6 style={{ fontWeight: 800, color: "white", padding: "25px 0" }}>{t('vision.description')}</h6>
                             <ul className="p-box">
                                 <li>
-                                    <strong>Vision</strong>
-                                    <p>To be the leading IT solutions provider in Myanmar, driving digital transformation and innovation through cutting-edge technology and tailored business solutions.</p>
+                                    <strong>{t('vision.visionTitle')}</strong>
+                                    <p>{t('vision.visionDesc')}</p>
                                 </li>
                             </ul>
 
                             <ul className="p-box">
                                 <li>
-                                    <strong>Mission</strong>
-                                    <p>Empowering businesses with scalable IT solutions, leveraging AI and cloud technology, delivering high-quality services, and ensuring long-term support.</p>
+                                    <strong>{t('vision.missionTitle')}</strong>
+                                    <p>{t('vision.missionDesc')}</p>
                                 </li>
                             </ul>
 

@@ -1527,6 +1527,18 @@ background: linear-gradient(135deg,  #ffffff 0%,#f3f3f3 50%,#ededed 76%,#ffffff 
   position: relative;
 }
 
+.price {
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.full-btn{
+  width: 100% !important;
+  border-radius: 6px !important;
+  box-shadow: -1px -4px 20px rgb(0 0 0 / 14%) !important;
+  margin: 0 !important;
+}
+
 .buy-tickets .pricing-item h3 {
   font-weight: 700;
   margin-bottom: 0;
@@ -1847,7 +1859,7 @@ background: linear-gradient(135deg,  #ffffff 0%,#f3f3f3 50%,#ededed 76%,#ffffff 
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 20px;
-  text-align: center;
+  text-align: left;
   transition: box-shadow 0.3s;
   background-color: #fff;
 }
@@ -1857,4 +1869,12 @@ background: linear-gradient(135deg,  #ffffff 0%,#f3f3f3 50%,#ededed 76%,#ffffff 
   font-weight: bold;
   margin-bottom: 15px;
   color: #100b22;
+}
+
+.plan-include{
+  font-size: 0.5rem;
+}
+
+.plan-type{
+  font-size: 14px;
 }

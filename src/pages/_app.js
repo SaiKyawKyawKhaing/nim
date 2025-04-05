@@ -1,8 +1,15 @@
 // _app.js
 import "@/styles/globals.css";
 import Script from 'next/script';
+import { appWithTranslation } from 'next-i18next';
+import { i18n } from 'next-i18next';
+import nextI18NextConfig from '../../next-i18next.config.js';
 
-export default function App({ Component, pageProps }) {
+if (!i18n?.isInitialized) {
+  i18n?.init(nextI18NextConfig);
+}
+
+function App({ Component, pageProps }) {
   const baseUrl = process.env.NODE_ENV === 'production' ? "https://digitechvault.com" : '';
   return (
     <>
@@ -16,3 +23,5 @@ export default function App({ Component, pageProps }) {
     </>
   );
 }
+
+export default appWithTranslation(App);

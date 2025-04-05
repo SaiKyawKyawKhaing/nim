@@ -1,8 +1,20 @@
 import React from "react";
 import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
 
 export default function Hero() {
   const { basePath } = useRouter();
+  const { t } = useTranslation('common');
+
+  function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  }
 
   return (
     <section
@@ -38,15 +50,15 @@ export default function Hero() {
 
             {/* Right Side - Content & Contact Info */}
             <div className="col-lg-6 col-12 text-center text-lg-start px-4">
-              <h1 className="fw-bold text-white pt-3">Next IT Myanmar</h1>
+              <h1 className="fw-bold text-white pt-3">{t('mainBanner.title')}</h1>
               <h5 className="fw-normal text-white pb-3" style={{ lineHeight: '2' }}>
-              NIM က စီးပွါးရေးလုပ်ငန်းများအတွက် အိုင်တီဆန်းသစ်မှုတွေ ယူလာပေးဖို့ အသင့်ရှိနေပြီ။ ဘာတွေများ စောင့်နေသေးလဲ။ ကဲ၊အတူတူ အံ့ဖွယ်တစ်ခုကို တည်ဆောက်ကြရအောင်!
+                {t('mainBanner.description')}
               </h5>
 
               <div>
                     <div className="d-flex align-items-center pt-2 pb-5">
                         <button className="button mr-3" onClick={() => scrollToSection('services')}>
-                            Explore Our Services
+                            {t('mainBanner.exploreServices')}
                             <svg fill="currentColor" viewBox="0 0 24 24" className="icon">
                                 <path
                                     clip-rule="evenodd"
@@ -56,7 +68,7 @@ export default function Hero() {
                             </svg>
                         </button>
                         <button className="button mr-3" onClick={() => scrollToSection('contact')}>
-                            Contact Us Today
+                            {t('mainBanner.contactUs')}
                             <svg fill="currentColor" viewBox="0 0 24 24" className="icon">
                                 <path
                                     clip-rule="evenodd"

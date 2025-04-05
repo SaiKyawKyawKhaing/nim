@@ -1,0 +1,161 @@
+{
+  "mainBanner": {
+    "title": "Empowering Southeast Asia with AI-Driven Solutions",
+    "description": "We are ready to bring IT innovations for your business. What are you waiting for? Let's build something amazing together!",
+    "exploreServices": "Explore Our Services",
+    "contactUs": "Contact Us Today",
+    "about": {
+      "title": "About Next IT Myanmar",
+      "description": "We're pioneering the future of IT in Myanmar. As one of the region's leading IT consulting firms, we bridge the gap between cutting-edge technology and real-world business solutions.",
+      "whereTitle": "Where",
+      "whereDescription": "We are serving in Myanmar, Thailand and Malaysia",
+      "whenTitle": "When",
+      "whenDescription": "Monday to Friday\n9:00 AM-5:00 PM"
+    }
+  },
+  "vision":{
+    "title":"Vision and Mission",
+    "description": "NIM က စီးပွါးရေးလုပ်ငန်းများအတွက် အိုင်တီဆန်းသစ်မှုတွေ ယူလာပေးဖို့ အသင့်ရှိနေပြီ။ ဘာတွေများ စောင့်နေသေးလဲ။ ကဲ၊အတူတူ အံ့ဖွယ်တစ်ခုကို တည်ဆောက်ကြရအောင်!",
+    "visionTitle":"Vision",
+    "missionTitle": "Mission",
+    "visionDesc":"We're pioneering the future of IT in Myanmar. As one of the region's leading IT consulting firms, we bridge the gap between cutting-edge technology and real-world business solutions.",
+    "missionDesc":"We are ready to bring IT innovations for your business. What are you waiting for? Let's build something amazing together!"
+
+  },
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Welcome to Amona Corporation",
+    "description": "Your trusted partner in digital solutions"
+  },
+  "about": {
+    "title": "About Us",
+    "description": "We are dedicated to providing innovative solutions for your business needs"
+  },
+  "services": {
+    "title": "Our Services",
+    "description": "Comprehensive digital services tailored to your requirements",
+    "webDev": {
+      "title": "Web Development",
+      "description": "Custom websites and web applications tailored to your business needs"
+    },
+    "digitalTransform": {
+      "title": "Digital Transform",
+      "description": "Custom websites and web applications tailored to your business needs"
+    },
+    "ecommerce": {
+      "title": "Ecommerce",
+      "description": "Custom websites and web applications tailored to your business needs"
+    },
+    "digitalMarketing": {
+      "title": "Digital Marketing",
+      "description": "Custom websites and web applications tailored to your business needs"
+    },
+    "plans": {
+      "basic": {
+        "price": "$15",
+        "name": "Basic Plan",
+        "description":"သင့်လိုအပ်ချက်များနှင့် ကိုက်ညီသော ပြည့်စုံသည့် ဒစ်ဂျစ်တယ်ဝန်ဆောင်မှုများ",
+        "type":"/USD"
+      },
+      "standard": {
+        "price": "$40",
+        "name": "Standard Plan",
+        "description":"သင့်လိုအပ်ချက်များနှင့် ကိုက်ညီသော ပြည့်စုံသည့် ဒစ်ဂျစ်တယ်ဝန်ဆောင်မှုများ",
+        "type":"/USD"
+      },
+      "premium": {
+        "price": "$70",
+        "name": "Premium Plan",
+        "description":"သင့်လိုအပ်ချက်များနှင့် ကိုက်ညီသော ပြည့်စုံသည့် ဒစ်ဂျစ်တယ်ဝန်ဆောင်မှုများ",
+        "type":"/USD"
+      }
+    },
+    "benefits": {
+      "pages": "5-10 Pages",
+      "webmail": "12 WebMail Accounts",
+      "security": "Security Support",
+      "updates": "4 time Update per month"
+    }
+    
+  },
+  "choose": {
+    "title": "Why Choose NIM",
+    "description": "At NIM (Next IT Myanmar), we provide innovative IT resources that meet the needs of businesses in Myanmar and internationally.",
+    "localExpertise": {
+      "title": "Local Expertise",
+      "description": "We understand the unique challenges of the Myanmar market."
+    },
+    "comprehensiveServices": {
+      "title": "Comprehensive Services",
+      "description": "From website and app development to IT consultancy, we offer end-to-end solutions."
+    },
+    "cuttingEdge": {
+      "title": "Cutting-Edge Technology",
+      "description": "We specialize in AI integration, custom software, and cloud-based platforms."
+    },
+    "tailoredSolutions": {
+      "title": "Tailored Solutions",
+      "description": "Our services are designed to meet your specific business needs."
+    },
+    "ongoingSupport": {
+      "title": "Ongoing Support",
+      "description": "We provide continuous support to help your technology grow with your business."
+    
+  }
+    },
+    "digitalTransform": {
+      "title": "Digital Transformation",
+      "description": "AI-powered solutions to optimize and automate business processes"
+    },
+    "ecommerce": {
+      "title": "E-commerce Solutions",
+      "description": "Scalable online store development with seamless user experience"
+    },
+    "digitalMarketing": {
+      "title": "Digital Marketing",
+      "description": "SEO, social media, and online advertising to grow your brand"
+    
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Get in touch with us for any inquiries",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message"
+    }
+  },
+  "website": {
+    "title": "Creating a Website",
+    "subtitle": "Want to know how we build a website?",
+    "steps": {
+      "consultation": {
+        "title": "1. Initial Consultation",
+        "description": "Understanding your idea and discussing the type of website you need."
+      },
+      "content": {
+        "title": "2. Content Gathering",
+        "description": "Collecting photos, text, and logos to ensure everything is in place."
+      },
+      "design": {
+        "title": "3. Design & Development",
+        "description": "Transforming your idea into a modern, functional website."
+      },
+      "revisions": {
+        "title": "4. Revisions & Feedback",
+        "description": "Refining the design based on your input and finalizing the details."
+      },
+      "launch": {
+        "title": "5. Final Launch",
+        "description": "Deploying your website and celebrating its successful launch."
+      }
+    }
+  }
+}
