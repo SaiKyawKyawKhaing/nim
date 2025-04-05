@@ -7,10 +7,8 @@ const dev = process.env.NODE_ENV !== 'production'
 const hostname = process.env.HOSTNAME || 'localhost'
 const port = process.env.PORT || 3000
 
-// Set directory to the user's home directory in production
-const dir = process.env.NODE_ENV === 'production' 
-  ? './public_html'  // Production directory path
-  : '.'
+// Use the current directory for both development and production
+const dir = '.'
 
 const app = next({ dev, dir, hostname, port })
 const handle = app.getRequestHandler()
