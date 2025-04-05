@@ -7,9 +7,9 @@ const dev = process.env.NODE_ENV !== 'production'
 const hostname = process.env.HOSTNAME || 'localhost'
 const port = process.env.PORT || 3000
 
-// Set directory to the current project directory (public_html in your case)
+// Set directory to the user's home directory in production
 const dir = process.env.NODE_ENV === 'production' 
-  ? path.resolve(__dirname)  // Current directory (public_html)
+  ? './public_html'  // Production directory path
   : '.'
 
 const app = next({ dev, dir, hostname, port })
