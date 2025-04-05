@@ -1,13 +1,17 @@
 const { createServer } = require('http')
 const { parse } = require('url')
 const next = require('next')
+const path = require('path')
 
 const dev = process.env.NODE_ENV !== 'production'
 const hostname = process.env.HOSTNAME || 'localhost'
 const port = process.env.PORT || 3000
 
-// Configure the base directory for deployment
-const dir = process.env.NODE_ENV === 'production' ? '/home/nextitmy' : '.'
+// Set directory to the current project directory (public_html in your case)
+const dir = process.env.NODE_ENV === 'production' 
+  ? path.resolve(__dirname)  // Current directory (public_html)
+  : '.'
+
 const app = next({ dev, dir, hostname, port })
 const handle = app.getRequestHandler()
 
