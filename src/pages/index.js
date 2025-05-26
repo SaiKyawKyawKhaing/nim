@@ -11,6 +11,7 @@ import AboutUs from '@/components/AboutUs';
 import Hero from '@/components/layouts/Hero';
 import Website from '@/components/Website';
 import Vision from '@/components/Vision';
+import WebsitePrice from '@/components/WebsitePrice';
 
 export default function Home() {
   return (
@@ -20,11 +21,10 @@ export default function Home() {
       <Hero/>
       <AboutUs/>
       <Website/>
+      <WebsitePrice/>
       <Service/>
       <Choose/>
       <Vision/>
- 
-
       <Contact/>
       </div>
         <Footer/>

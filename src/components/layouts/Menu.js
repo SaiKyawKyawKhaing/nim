@@ -1,5 +1,6 @@
 import menuData from '../../../public/DB/menu.json';
 import categories from '../../../public/DB/categories.json';
+import { FaChevronCircleDown } from "react-icons/fa";
 import { useState,useEffect } from 'react';
 import Link from 'next/link';
 
@@ -28,13 +29,15 @@ import Link from 'next/link';
 
 const Menu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(true);
+  const [activeSubmenu, setActiveSubmenu] = useState(null);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1200) {
         setMenuOpen(false);
-        setDropdownOpen(false);
+        setActiveSubmenu(null);
+        // setDropdownOpen(false);
       }
     };
 
@@ -43,36 +46,55 @@ const Menu = () => {
   }, []);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
-  const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
+  // const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
+  const toggleSubmenu = (itemId) => {
+    setActiveSubmenu(activeSubmenu === itemId ? null : itemId);
+  };
 
   return (
     <nav id="navmenu" className="navmenu">
       <ul className={`mobile-ul ${menuOpen ? 'show-mobile' : 'hide-mobile'}`}>
-        {menuData.map(({ name, href, children }, index) => (
-          <li key={index}>
-            {children ? (
-              <div className={`dropdown ${menuOpen && dropdownOpen ? 'd-block' : 'd-flex'}`}>
-                <Link href={href}>{name}</Link>
-                <Link href="/" onClick={(e) => { e.preventDefault(); toggleDropdown(); }}>
-                  <i className={`bi ${dropdownOpen && menuOpen ? 'bi bi-x' : 'bi bi-chevron-down'} mobile-nav-toggle`} />
-                </Link>
-                <ul className={`${dropdownOpen ? 'show-mobile' : 'hide-mobile'}`}>
-                  {categories.map(category => (
-                    <li key={category.id}>
-                      <Link href={`/products/categories/${category.id}`}>{category.name}</Link>
+        {menuData.map((item) => (
+          <li key={item.id} className="nav-item">
+            {item.submenu ? (
+              <>
+                <div className="d-flex align-items-center justify-content-between w-100 mobile-nav-link">
+                  <Link href={item.href} onClick={(e) => e.preventDefault()}>
+                    {item.name}
+                  </Link>
+                  <button 
+                    className={`dropdown-toggle-btn ${activeSubmenu === item.id ? 'active' : ''} ${item.name === "Web Hosting" ? 'hosting-dropdown' : ''}`}
+                    onClick={() => toggleSubmenu(item.id)}
+                  >
+                    <FaChevronCircleDown />
+                  </button>
+                </div>
+                <ul className={`submenu ${activeSubmenu === item.id ? 'show-mobile' : ''}`}>
+                  {item.submenu.map((subItem) => (
+                    <li key={subItem.id}>
+                      <Link href={subItem.href} className="submenu-item">
+                        {subItem.name}
+                      </Link>
                     </li>
                   ))}
                 </ul>
-              </div>
+              </>
             ) : (
-              <Link className={href === "/contact" ? `${menuOpen ? '' : 'cta-btn'} d-inline d-sm-inline` : ""} href={href}>
-                {name}
+              <Link 
+                className={item.href === "/contact" ? `${menuOpen ? '' : 'cta-btn'} d-inline d-sm-inline` : ""} 
+                href={item.href}
+              >
+                {item.name}
               </Link>
             )}
           </li>
         ))}
       </ul>
-      <i id="main-toggle" className={`mobile-nav-toggle d-xl-none ${menuOpen ? 'bi bi-x' : 'bi bi-list'}`} onClick={toggleMenu} />
+      <i 
+        id="main-toggle" 
+        className={`mobile-nav-toggle d-xl-none ${menuOpen ? 'bi bi-x' : 'bi bi-list'}`} 
+        onClick={toggleMenu} 
+      />
     </nav>
   );
 };

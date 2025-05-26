@@ -11,12 +11,44 @@
     },
     {
       "id": 3,
-      "name": "Services",
-      "href": "#services"
+      "name": "Website Pricing",
+      "href": "#website"
     },
     {
       "id": 4,
+      "name": "Packages",
+      "href": "#services"
+    },
+    {
+      "id": 5,
       "name": "Contact Us",
       "href": "#contact"
+    },
+    {
+      "id": 6,
+      "name": "Web Hosting",
+      "href": "/web-hosting",
+      "submenu": [
+        {
+          "id": "6-1",
+          "name": "Shared Hosting",
+          "href": "https://nextitmyanmar.com/billing/index.php?rp=/store/share-hosting"
+        },
+        {
+          "id": "6.2",
+          "name": "VPS Hosting",
+          "href": "https://nextitmyanmar.com/billing/index.php?rp=/store/vps-hosting"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Domain",
+      "href": "https://nextitmyanmar.com/billing/cart.php?a=add&domain=register"
+    },
+    {
+      "id": 8,
+      "name": "Login",
+      "href": "https://nextitmyanmar.com/billing/index.php?rp=/login"
     }
   ]
